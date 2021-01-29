@@ -41,7 +41,7 @@ nav {
 }
 .tab-content {
     position: absolute;
-    background: rgb(78, 78, 78);
+    background: rgb(150, 150, 150);
     top: 100%;
     left: 0;
     width: 100%;
@@ -73,7 +73,7 @@ nav {
     height: 0;
     border-style: solid;
     border-width: 0 10px 10px 10px;
-    border-color: transparent transparent rgb(78, 78, 78) transparent;
+    border-color: transparent transparent rgb(150, 150, 150) transparent;
 }
 .dropdown-item.active, 
 .dropdown-item:active {
