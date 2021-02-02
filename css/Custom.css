@@ -79,9 +79,26 @@ nav {
 .dropdown-item:active {
     background-color: #666;
 }
-/* .collapse:not(.show){ display: block; }
-.collapse:not(.show) > ul{ display:none; }
-.collapse.show > form{ display:none; } */
+.closebtn {
+    display: block;
+    position: absolute;
+    top: -25px;
+    left: calc(50% - 33px);
+    text-align: center;
+    width: 66px;
+    height: 20px;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    line-height: 20px;
+}
+.footerLP {
+    display: none;
+    padding-top: 0;
+}
+.footerLP.show {
+    display: flex;
+}
 
 /* 配色一 */
 .color-1 .bg-first {

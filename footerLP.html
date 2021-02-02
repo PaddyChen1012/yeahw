@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="Content-Type" content="text/html"; charset="uft-8">
+    <meta http-equiv="Content-Language" content="zh-TW">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/Custom.css">
+    <title>Wclcome XXXXXX</title>
+
+</head>
+
+
+<body class="color-2">
+    
+    <div id="imgLP" class="container fixed-bottom bg-black-50">
+        <div id="closebtn" class="closebtn bg-black-50">close X</div>
+        <div class="row mt-2 footerLP show">
+            <div class="col-12 col-lg-6 text-center mb-2">
+                <img src="images/adl.jpg" alt="" class="img-fluid">
+            </div>
+            <div class="col-12 col-lg-6 text-center mb-2">
+                <img src="images/adl.jpg" alt="" class="img-fluid">
+            </div>
+        </div>
+    </div>
+
+    <script>
+    let closebtn = document.querySelector('#closebtn');
+    function close() {
+        let imgLP = document.querySelector('#imgLP');
+        imgLP.remove('show')
+    }
+    closebtn.addEventListener('click', close, false)
+    </script>
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
