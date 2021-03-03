@@ -260,3 +260,13 @@ screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
         left: -31.8px;
     }
 }
+
+.img-box {
+    width: 100%;
+    padding-bottom: 56.25%;
+    position: relative;
+    overflow: hidden;
+}
+img.card-img-top {
+    position: absolute;
+}
