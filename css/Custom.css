@@ -92,6 +92,14 @@ nav {
     cursor: pointer;
     line-height: 20px;
 }
+.bottomleft {
+    width: 150px;
+    height: 50px;
+}
+.shadow{
+    -webkit-filter: drop-shadow(2px 2px 3px #fceef5);
+    filter: drop-shadow(2px 2px 3px #fceef5);
+}
 .footerLP {
     display: none;
     padding-top: 0;
@@ -157,6 +165,9 @@ screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
     }
     .border-lg-top {
         border-top:1px solid #666;
+    }
+    .card-footer {
+        flex-direction: column;
     }
 }
 @media (min-width: 992px) {
