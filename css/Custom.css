@@ -415,10 +415,13 @@ svg {
         display: inline-flex;
     }
     .ph-tv-name {
-        height: 40px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        white-space: normal;
         overflow: hidden;
     }
-    .showmore {height: auto;}
+    .showmore {-webkit-line-clamp: unset;}
     .more-btn {color:rgb(206, 82, 153);}
     .play-box {
         width: 100%;
