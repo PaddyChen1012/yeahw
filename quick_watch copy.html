@@ -1,0 +1,548 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="Content-Type" content="text/html"; charset="uft-8">
+    <meta http-equiv="Content-Language" content="zh-TW">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Wclcome XXXXXX</title>
+
+    <svg style="display: block; width: 0; height: 0;">
+        <symbol viewBox="0 0 16 16" id="play-btn"><path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zM6.379 5.227A.25.25 0 006 5.442v5.117a.25.25 0 00.379.214l4.264-2.559a.25.25 0 000-.428L6.379 5.227z"></path></symbol>
+    </svg>
+
+    <style>
+        .advertising {
+    display: none;
+    }
+    nav {
+        position: fixed !important;
+        z-index: 1;
+    }
+    .main {
+        padding-top: 60px;
+    }
+    .border-1 {
+        border-width: 1px;
+    }
+    .border-2 {
+        border-width: 2px;
+    }
+    .border-3 {
+        border-width: 3px;
+    }
+    .border-4 {
+        border-width: 4px;
+    }
+    .border-5 {
+        border-width: 5px;
+    }
+    .divider-y {
+        width: 2px;
+        height: 80px;
+    }
+    .divider-x {
+        width: 80px;
+        height: 2px;
+    }
+    .bg-black-50 {
+        background: rgba(0, 0, 0, 0.5);
+    }
+    /* header */
+    .ionicon {
+        width: 18px;
+        height: 18px;
+    }
+    .tab-content {
+        position: absolute;
+        background: rgb(150, 150, 150);
+        top: 100%;
+        left: 0;
+        width: 100%;
+        overflow: auto;
+    }
+    .dropdown-item {
+        color: #eee;
+        border-radius: 0 !important;
+    }
+    .nav-link {
+        padding: .5rem .5rem;
+    }
+    .nav-tabs .nav-link {
+        color: #666;
+    }
+    .nav-tabs .nav-link.active, 
+    .nav-tabs .nav-item.show .nav-link {
+        position: relative;
+        background-color: rgba(255, 255, 255, 0.3);
+        border: unset;
+    }
+    .nav-tabs .nav-link.active:before, 
+    .nav-tabs .nav-item.show .nav-link:before {
+        content: '';
+        position: absolute;
+        bottom: -30%;
+        left: calc(50% - 10px);
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 10px 10px 10px;
+        border-color: transparent transparent rgb(150, 150, 150) transparent;
+    }
+    .dropdown-item.active, 
+    .dropdown-item:active {
+        background-color: #666;
+    }
+    .closebtn {
+        display: block;
+        position: absolute;
+        top: -25px;
+        left: calc(50% - 33px);
+        text-align: center;
+        width: 66px;
+        height: 20px;
+        border-radius: 3px;
+        color: #fff;
+        cursor: pointer;
+        line-height: 20px;
+    }
+    .bottomleft {
+        width: 150px;
+        height: 50px;
+    }
+    .shadow{
+        -webkit-filter: drop-shadow(2px 2px 3px #fceef5);
+        filter: drop-shadow(2px 2px 3px #fceef5);
+    }
+    .footerLP {
+        display: none;
+        padding-top: 0;
+    }
+    .footerLP.show {
+        display: flex;
+    }
+
+    /* 配色一 */
+    .color-1 .bg-first {
+        background-color: #e3fdfd;
+    }
+    .color-1 .bg-second {
+        background-color: #cadefc;
+    }
+    .color-1 .bg-third {
+        background-color: #c3bef0;
+    }
+    .color-1 .bg-fourth {
+        background-color: #cca8e9;
+    }
+
+    /* 配色二 */
+    .color-2 .bg-first {
+        background-color: #f4f4f4;
+    }
+    .color-2 .bg-second {
+        background: rgb(255,218,218);
+    }
+    .color-2 .bg-third {
+        background-color: #3a3535;
+    }
+    .color-2 .bg-fourth {
+        background-color: #fceef5;
+    }
+    .border-top {
+        border-color: #666 !important;
+    }
+
+    .ellipsis {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        color: darkgrey;
+        font-size: 0.8rem;
+    }
+
+    /* Only For computer */
+    @media (pointer: fine),
+    (pointer: fine) and (-moz-touch-enabled: 0),
+    screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        .hover:hover {
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.5) !important;
+        }
+    }
+
+    @media (max-width: 991px) {
+        .form-inline input { width: calc(100% - 60px) !important;}
+        .form-inline button { width: 40px;}
+        .nav-tabs .nav-link.active:before, 
+        .nav-tabs .nav-item.show .nav-link:before {
+            bottom: calc(-30% + 10px);
+        }
+        .border-lg-top {
+            border-top:1px solid #666;
+        }
+        .card-footer {
+            flex-direction: column;
+        }
+    }
+    @media (min-width: 992px) {
+        .tab-content > .active {
+            display: flex;
+        }
+    }
+
+    /*Actress Page*/
+    .transparent {
+        background-color: transparent;
+    }
+    .headshot {
+        width:200px;
+        height: 200px;
+        background: url(https://picsum.photos/id/685/600/400) no-repeat center/cover;
+        border-radius: 50%;
+    }
+    .line {
+        padding: 0 3rem;
+    }
+    .timeline {
+        border-left: 3px solid #3a3535;
+        border-bottom-right-radius: 4px;
+        border-top-right-radius: 4px;
+        margin: 0 auto;
+        letter-spacing: 0.2px;
+        position: relative;
+        line-height: 1.4em;
+        font-size: 1.03em;
+        padding: 50px;
+        list-style: none;
+        text-align: left;
+        max-width: 100%;
+    }
+    .timeline h1 {
+        font-weight: 300;
+        font-size: 1.4em;
+    }
+    .timeline h2,
+    .timeline h3 {
+        font-weight: 600;
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+    .timeline .event {
+        border-bottom: 1px dashed #e8ebf1;
+        padding-bottom: 25px;
+        margin-bottom: 25px;
+        position: relative;
+    }
+    .timeline .event:last-of-type {
+        padding-bottom: 0;
+        margin-bottom: 0;
+        border: none;
+    }
+    .timeline .event:after {
+        position: absolute;
+        display: block;
+        top: 0;
+    }
+    .timeline .event:after {
+        -webkit-box-shadow: 0 0 0 3px #3a3535;
+        box-shadow: 0 0 0 3px #3a3535;
+        left: -55.8px;
+        background: #fff;
+        border-radius: 50%;
+        height: 9px;
+        width: 9px;
+        content: "";
+        top: 5px;
+    }
+    .rtl .timeline {
+        border-left: 0;
+        text-align: right;
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 4px;
+        border-top-left-radius: 4px;
+        border-right: 3px solid #3a3535;
+    }
+    .rtl .timeline .event::after {
+        left: 0;
+        right: -55.8px;
+    }
+    @media (max-width: 767px) {
+        .line {
+            padding: 0 1.5rem;
+        }
+        .timeline {
+            max-width: 98%;
+            padding: 25px;
+        }
+        .timeline .event {
+            padding-top: 30px;
+            border-bottom: 0px dashed #e8ebf1;
+            padding-bottom: 0px;
+            margin-bottom: 0px;
+        }
+        .timeline .event:after {
+            left: -31.8px;
+        }
+    }
+
+    .img-box {
+        width: 100%;
+        padding-bottom: 56.25%;
+        position: relative;
+        overflow: hidden;
+    }
+    img.card-img-top {
+        position: absolute;
+    }
+
+    .bg-black {background-color: rgba(0, 0, 0, 1);}
+    .qw-img-box {
+        position: relative;
+    }
+    .qw-img-box:before {
+        content: attr(data-no);
+        position: absolute;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        top: 0;
+        left: 0;
+        width: 90px;
+        height: 60px;
+        color: #fff;
+        font-size: 1.2rem;
+        z-index: 1;
+    }
+    .qw-img-box:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 120px 180px 0 0;
+        border-color: rgb(206, 82, 153) transparent transparent transparent;
+    }
+    .qw-word {
+        position: absolute;
+        left: 0;
+        z-index: 1;
+    }
+    .qw-img-boder {
+        position: relative;
+        top: 0;
+        right: 0;
+    }
+    .qw-img {
+        position: relative;
+        width: 100%;
+        padding-bottom: 67%;
+        background:linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 50%), url(../images/demo_img.jpg)no-repeat center/cover;
+    }
+    .play-box { 
+        position: absolute;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0,0,0,.5);
+    }
+    .ph-only {
+        display: none;
+    }
+    .play-btn {
+        display: flex;
+        fill: #fff;
+        width: 120px;
+        height: 120px;
+    }
+    .qw-img-boder:hover .play-box {
+        display: flex;
+    }
+    .movie-box {
+        white-space:nowrap;
+    }
+    .movie {
+        position: relative;
+        display: inline-block;
+        width: 18%;
+        border-radius: 5%;
+        overflow: hidden;
+    }
+    .movie-img {
+        width: 100%;
+        padding-bottom: 67%;
+        background: url(../images/demo_img.jpg)no-repeat center/cover;
+    }
+    .play_icon {
+        position: absolute;
+        display: flex;
+        top: calc(50% - 40px);
+        left: calc(50% - 40px);
+        width: 80px;
+        height: 80px;
+        fill: rgb(206, 82, 153);
+    }
+    svg {
+        width: 100%;
+        height: 100%;
+    }
+
+
+    @media (max-width: 767px) {
+        .qw-img {
+            position: relative;
+            width: 100%;
+            padding-bottom: 67%;
+            background:linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 50%), url(../images/demo_img.jpg)no-repeat center/cover;
+        }
+        .qw-word {
+            position: relative;
+            order: 1;
+        }
+        .tv-name {
+            display: none;
+        }
+        .qw-img-box:before {
+            width: 45px;
+            height: 30px;
+            font-size: 0.6rem;
+        }
+        .qw-img-box:after {
+            border-width: 60px 90px 0 0;
+        }
+        .play-box,
+        .ph-only {
+            position: relative;
+            display: inline-flex;
+        }
+        .play-box {
+            width: 100%;
+            background-color: rgb(255,218,218);
+            font-weight: bolder;
+            margin-bottom: 2rem;
+        }
+        .play-btn {
+            width: 30px;
+            height: 30px;
+            fill: #333;
+        }
+        .movie {
+            width: 80%;
+        }
+    }
+
+    .title {
+        width: 100%;
+        height: 117px;
+        background-color:#666;
+    }
+    .footer {
+        width: 100%;
+        height: 97px;
+        background-color: #666;
+    }
+    </style>
+
+</head>
+
+
+<body class="color-2 bg-black">
+
+    <div class="title"></div>
+    <!-- 影片播放區 Start -->
+    <div class="container my-4">
+        <div class="row w-100 mx-auto qw-img-box d-flex justify-content-end align-items-center" data-no="KTKC-105">
+            <div class="col-12 col-md-5 qw-word text-light d-flex flex-column">
+                <span class="tv-name h3 mb-5">ギリギリ寸止め×小悪魔系挑発淫語 SODstarの戸田真琴ちゃんに思いっきり焦らされまくったらチョー気持ちいいザーメンが出ちゃいました◎ パンティと写真付き</span>
+                <div class="word-box d-flex">
+                    <span class="h5">วันจัดจำหน่าย：</span><span class="h5">2021-01-20</span>
+                </div>
+                <div class="word-box d-flex">
+                    <span class="h5">ดาราเอวี：</span><a href="" class="h5">มือสมัครเล่น</a>
+                </div>
+            </div>
+            <div class="col-12 col-md-8 qw-img-boder p-0">
+                <div class="qw-img"></div>  
+                <a href="" class="play-box p-2 rounded align-items-center">
+                    <span class="ph-only text-dark mr-3">ดูหนัง</span>
+                    <i class="play-btn"><svg><use xlink:href="#play-btn"></use></svg></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- 影片播放區 End -->
+
+    <!-- 影片列表區 Start -->
+    <!-- 小羊希望列表區可以放64部影片 -->
+    <div class="container-fuild overflow-hidden my-4">
+        <div class="movie-box overflow-auto">
+            <div class="movie mx-2">
+                <div class="movie-img"></div>
+                <i class="play_icon"><svg><use xlink:href="#play-btn"></use></svg></i>
+            </div>
+            <div class="movie mx-2">
+                <div class="movie-img"></div>
+                <i class="play_icon"><svg><use xlink:href="#play-btn"></use></svg></i>
+            </div>
+            <div class="movie mx-2">
+                <div class="movie-img"></div>
+                <i class="play_icon"><svg><use xlink:href="#play-btn"></use></svg></i>
+            </div>
+            <div class="movie mx-2">
+                <div class="movie-img"></div>
+                <i class="play_icon"><svg><use xlink:href="#play-btn"></use></svg></i>
+            </div>
+            <div class="movie mx-2">
+                <div class="movie-img"></div>
+                <i class="play_icon"><svg><use xlink:href="#play-btn"></use></svg></i>
+            </div>
+            <div class="movie mx-2">
+                <div class="movie-img"></div>
+                <i class="play_icon"><svg><use xlink:href="#play-btn"></use></svg></i>
+            </div>
+            <div class="movie mx-2">
+                <div class="movie-img"></div>
+                <i class="play_icon"><svg><use xlink:href="#play-btn"></use></svg></i>
+            </div>
+            <div class="movie mx-2">
+                <div class="movie-img"></div>
+                <i class="play_icon"><svg><use xlink:href="#play-btn"></use></svg></i>
+            </div>
+            <div class="movie mx-2">
+                <div class="movie-img"></div>
+                <i class="play_icon"><svg><use xlink:href="#play-btn"></use></svg></i>
+            </div>
+            <div class="movie mx-2">
+                <div class="movie-img"></div>
+                <i class="play_icon"><svg><use xlink:href="#play-btn"></use></svg></i>
+            </div>
+            <div class="movie mx-2">
+                <div class="movie-img"></div>
+                <i class="play_icon"><svg><use xlink:href="#play-btn"></use></svg></i>
+            </div>
+            <div class="movie mx-2">
+                <div class="movie-img"></div>
+                <i class="play_icon"><svg><use xlink:href="#play-btn"></use></svg></i>
+            </div>
+        </div>
+    </div>
+    <!-- 影片列表區 End -->
+
+    <div class="footer"></div>
+    
+
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
