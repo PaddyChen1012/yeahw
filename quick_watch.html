@@ -28,12 +28,21 @@
         <div class="row w-100 mx-auto qw-img-box d-flex justify-content-end align-items-center" data-no="KTKC-105">
             <div class="col-12 col-md-5 qw-word text-light d-flex flex-column">
                 <span class="tv-name h3 mb-5">ギリギリ寸止め×小悪魔系挑発淫語 SODstarの戸田真琴ちゃんに思いっきり焦らされまくったらチョー気持ちいいザーメンが出ちゃいました◎ パンティと写真付き</span>
-                <div class="word-box d-flex">
-                    <span class="h5">2021-01-20</span>
+                <div class="msg-box flex-wrap">
+                    <div class="word-box d-flex w-50">
+                        <span class="h5">รหัสหนัง：</span>
+                        <span class="h5">KTKC-105</span>
+                    </div>
+                    <div class="word-box d-flex w-50">
+                        <span class="h5">2021-01-20</span>
+                    </div>
+                    <div class="word-box d-flex w-100">
+                        <span class="h5">ดาราเอวี：</span>
+                        <a href="" class="h5 actress-name">มือสมัครเล่น</a>
+                    </div>
                 </div>
-                <div class="word-box d-flex">
-                    <a href="" class="h5 actress-name">มือสมัครเล่น</a>
-                </div>
+                <span id="name-box" class="ph-tv-name h3 mt-3 mb-1">ギリギリ寸止め×小悪魔系挑発淫語 SODstarの戸田真琴ちゃんに思いっきり焦らされまくったらチョー気持ちいいザーメンが出ちゃいました◎ パンティと写真付き</span>
+                <span id="show-btn" class="more-btn">more>></span>
             </div>
             <div class="col-12 col-md-8 qw-img-boder p-0">
                 <div class="qw-img"></div>  
@@ -107,6 +116,21 @@
 
     <script src="js/jquery-3.5.1.slim.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        let showBtn = document.querySelector('#show-btn');
+        let nameBox = document.querySelector('#name-box');
+        
+        function showMore(){
+            if (nameBox.classList.contains('showmore')) {
+                nameBox.classList.remove('showmore');
+            }
+            else {
+                nameBox.classList.add('showmore');
+            }
+        }
+        showBtn.addEventListener('click',showMore,false);
+
+    </script>
 
 </body>
 </html>

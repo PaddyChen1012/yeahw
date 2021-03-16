@@ -285,9 +285,7 @@ img.card-img-top {
 
 /* quick_watch */
 .bg-black {background-color: rgba(0, 0, 0, 1);}
-.qw-img-box {
-    position: relative;
-}
+.qw-img-box {position: relative;}
 .qw-img-box:before {
     content: attr(data-no);
     position: absolute;
@@ -312,6 +310,21 @@ img.card-img-top {
     border-style: solid;
     border-width: 120px 180px 0 0;
     border-color: rgb(206, 82, 153) transparent transparent transparent;
+}
+.tv-name .card {
+    background-color: transparent;
+    border: 0;
+}
+.tv-name button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.25);
+    color: #fff;
+}
+.btn-link:hover {
+    color: #eee; 
+    text-decoration: none;
 }
 .qw-word {
     position: absolute;
@@ -340,21 +353,15 @@ img.card-img-top {
     right: 0;
     background-color: rgba(0,0,0,.5);
 }
-.ph-only {
-    display: none;
-}
+.ph-only {display: none;}
 .play-btn {
     display: flex;
     fill: #fff;
     width: 120px;
     height: 120px;
 }
-.qw-img-boder:hover .play-box {
-    display: flex;
-}
-.movie-box {
-    white-space:nowrap;
-}
+.qw-img-boder:hover .play-box {display: flex;}
+.movie-box {white-space:nowrap;}
 .movie {
     position: relative;
     display: inline-block;
@@ -394,22 +401,25 @@ svg {
         position: relative;
         order: 1;
     }
-    .tv-name {
-        margin-bottom: .8rem !important;
-    }
+    .tv-name {display: none;}
+    .msg-box {display: flex;}
     .qw-img-box:before {
         width: 45px;
         height: 30px;
         font-size: 0.6rem;
     }
-    .qw-img-box:after {
-        border-width: 60px 90px 0 0;
-    }
+    .qw-img-box:after {border-width: 60px 90px 0 0;}
     .play-box,
     .ph-only {
         position: relative;
         display: inline-flex;
     }
+    .ph-tv-name {
+        height: 40px;
+        overflow: hidden;
+    }
+    .showmore {height: auto;}
+    .more-btn {color:rgb(206, 82, 153);}
     .play-box {
         width: 100%;
         background-color: rgb(255,218,218);
@@ -421,15 +431,9 @@ svg {
         height: 30px;
         fill: #333;
     }
-    .movie {
-        width: 40%;
-    }
-    .qw-page .h3 {
-        font-size: 1rem;
-    }
-    .qw-page .h5 {
-        font-size: .8rem;
-    }
+    .movie {width: 40%;}
+    .qw-page .h3 {font-size: 1rem;}
+    .qw-page .h5 {font-size: .8rem;}
 }
 
 .title {
