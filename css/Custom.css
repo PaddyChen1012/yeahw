@@ -282,6 +282,8 @@ img.card-img-top {
     position: absolute;
 }
 
+
+/* quick_watch */
 .bg-black {background-color: rgba(0, 0, 0, 1);}
 .qw-img-box {
     position: relative;
@@ -380,6 +382,7 @@ svg {
 }
 
 
+
 @media (max-width: 767px) {
     .qw-img {
         position: relative;
@@ -392,7 +395,7 @@ svg {
         order: 1;
     }
     .tv-name {
-        display: none;
+        margin-bottom: .8rem !important;
     }
     .qw-img-box:before {
         width: 45px;
@@ -419,7 +422,13 @@ svg {
         fill: #333;
     }
     .movie {
-        width: 80%;
+        width: 40%;
+    }
+    .qw-page .h3 {
+        font-size: 1rem;
+    }
+    .qw-page .h5 {
+        font-size: .8rem;
     }
 }
 
